@@ -9,7 +9,7 @@ import { FaArrowLeftLong } from "react-icons/fa6";
 
 
 
-export default function page() {
+export default function Page() {
     const data = useSelector((state) => state.cart)
 
     const dispatch = useDispatch();

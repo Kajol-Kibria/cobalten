@@ -6,7 +6,7 @@ import Link from 'next/link';
 import React from 'react'
 import { useDispatch } from 'react-redux';
 
-export default function page({params}) {
+export default function Page({params}) {
   const dispatch = useDispatch();
   const handleadd = (item) =>{
     dispatch(add(item))

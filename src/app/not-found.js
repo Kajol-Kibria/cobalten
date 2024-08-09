@@ -15,7 +15,7 @@ export default function notfound() {
 		
 		<div className='sm:text-2xl text-lg'>
 		<h3>
-		Look like you're lost
+		Look like you are lost
 		</h3>
 		
 		<p className='mb-10'>the page you are looking for not avaible!</p>
