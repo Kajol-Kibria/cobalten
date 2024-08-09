@@ -1,6 +1,6 @@
 'use client'
 import Link from 'next/link'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { HiOutlineUserCircle } from "react-icons/hi2";
 import { IoCartOutline  } from "react-icons/io5";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
@@ -14,6 +14,8 @@ export default function Navbar() {
     const data = useSelector((state)=> state.cart)
     const [menu, setMenu] = useState(false);
     const path = usePathname();
+    const [print, setPrint] = useState(false);
+    useEffect(()=>{setPrint(true)},[])
     const navarray = [
         {
             name : 'Home',
@@ -55,7 +57,7 @@ export default function Navbar() {
                 <Link href='/cart'>
                 <div className='flex items-center'>
                     <IoCartOutline size={27}/>
-                    <div className=' bg-[#abb175] text-white text-sm font-semibold w-5 h-5  rounded-full text-center '>{data.cartItems.length}</div>
+                    <div className=' bg-[#abb175] text-white text-sm font-semibold w-5 h-5  rounded-full text-center '>{print && data.cartItems.length}</div>
                 </div>
                 </Link>
                 <div className='cursor-pointer'>

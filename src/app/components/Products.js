@@ -21,7 +21,7 @@ export default function Products() {
         {details.map((item)=>{
             return(
                 <div key={item.id} className=' bg-[#f4f5eb]/80 group grid items-center justify-center text-center rounded-lg py-6'>
-                    <div className=''>
+                    <div>
                         <Link href={`./details/${item.id}`}>
                         <Image className='group-hover:scale-150 sm:scale-100 scale-[1.4]  group-hover:-translate-y-4 transition-all duration-500 drop-shadow-[0px_50px_35px_#0007] object-cover' src={item.image} alt='' width={150} height={150}/>
                         <p className='font-bold my-4'>{item.name}</p>
