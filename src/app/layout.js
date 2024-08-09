@@ -2,7 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 
 import Navbar from "./components/Navbar";
-import { ClerkProvider} from '@clerk/nextjs'
+
 import './globals.css';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from "./components/Footer";
@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
     <Provider>
 
 
-    <ClerkProvider>
+    
     <html lang="en">
       <body className={poppins.className}>
       <Message>
@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
       </Message>
         </body>
     </html>
-    </ClerkProvider>
+   
     </Provider>
       
         

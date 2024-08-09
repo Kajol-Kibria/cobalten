@@ -6,7 +6,7 @@ import { IoCartOutline  } from "react-icons/io5";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
 import { usePathname } from 'next/navigation';
 import { IoMdClose } from "react-icons/io";
-import {SignInButton, SignedIn, SignedOut, UserButton } from '@clerk/nextjs'
+
 import { useSelector } from 'react-redux';
 
 
@@ -61,15 +61,10 @@ export default function Navbar() {
                 </div>
                 </Link>
                 <div className='cursor-pointer'>
-                    
-                    <SignedOut>
-              <SignInButton>
+                <Link href='/loginpage'>
               <HiOutlineUserCircle size={27}/>
-              </SignInButton>
-            </SignedOut>
-            <SignedIn>
-              <UserButton/>
-            </SignedIn>
+                </Link> 
+      
                 </div>
                 <div onClick={()=>{setMenu(!menu)}} className='block sm:hidden z-50'>
                     <HiOutlineMenuAlt1 className={`${menu?'hidden':'block'}`} size={27}/>
